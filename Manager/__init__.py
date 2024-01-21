@@ -1,5 +1,5 @@
 class Info:
-    def __init__(self, Name, Description, Writer, Version):
+    def __init__(self, Name:str, Description:str, Writer:str, Version:str):
         self.Name = Name
         self.Description = Description
         self.Writer = Writer
