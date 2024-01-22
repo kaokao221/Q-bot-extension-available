@@ -16,6 +16,9 @@ class Info(Manager.Info):
             Version="1"
         )
 
-class Enents:
+class Events:
     def __init__(self) -> None:
-        pass
+        self.Events = [
+            Manager.events.NewGroupInvited(),
+            Manager.events.NewMessageFetched()
+        ]
