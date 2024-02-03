@@ -22,4 +22,5 @@ class Info(Manager.Info):
 ```
 `Info`不需要额外的自定义信息，详见[`Manager/__init__.py`](/Manager/__init__.py)
 
-### `Events`
+### `Events`类
+`Events`声明了在发生事件时的行为，
