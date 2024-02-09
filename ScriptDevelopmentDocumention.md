@@ -6,11 +6,16 @@
 
 正常的插件应该包括四个类（详见[`example_script.py`](/example_script.py)）：[`Info`](#info类)、[`Events`](#Events类)、`UnexpectedSituations`和`Configurations`，以下将详细说明四个类的撰写和API方法。
 
+需要注意的是，插件头部需要先引用模块`Manager`，如下：
+```python
+import Manager
+```
+
 ### `Info`类
 `Info`是该插件的基本信息。
 
 这是一个`Info`示例片段
-```Python
+```python
 class Info(Manager.Info):
     def __init__(self) -> None:
         super().__init__(

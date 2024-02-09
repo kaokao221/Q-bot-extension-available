@@ -31,7 +31,7 @@ class Events:
         Manager.Message.new("大家好！").sendto(Manager.NewGroptInvited)
 
     @staticmethod
-    def when_fetch_new_message(self):
+    def when_fetch_new_message():
         if Manager.NewMessageFetched.offset(1) == Manager.NewMessageFetched.offset(
                 2) and Manager.NewMessageFetched.offset(2) == Manager.NewMessageFetched.offset(
                 3) and Manager.NewMessageFetched.offset(3) == Manager.NewMessageFetched.offset(
