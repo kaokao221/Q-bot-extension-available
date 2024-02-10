@@ -1,0 +1,7 @@
+{
+  "name": "Q bot",
+  "description": "A extension-available QQ bot build with Python, works on QQ NT or go-cqhttp.",
+  "author": "kaokao221",
+  "version": "alpha_dev",
+  "url": "https://github.com/kaokao221/Q-bot-extension-available"
+}
