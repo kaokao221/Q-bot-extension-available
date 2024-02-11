@@ -1,8 +1,8 @@
 import argparse
-import message
 
-import events
-import unexpectedSituations
+from message import Message
+from events import *
+from unexpectedSituations import *
 
 
 class Info:
@@ -13,10 +13,14 @@ class Info:
         self.Version = Version
 
     def __str__(self) -> str:
-        return f"插件[{self.Name}]，当前版本号：{self.Version}，由[{self.Writer}]开发。"
+        return "插件{}，当前版本号：{}，由{}开发。".format(self.Name, self.Version, self.Description)
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--process-type", type=str, default="NewMessageFetched")
 parser.add_argument("--message-id", type=int, default=-1)
 NewMessageFetched = message.Fetch(id=parser.message_id)
+
+if __name__ == "__main__":
+    print(parser)
+    print(parser.message_id)

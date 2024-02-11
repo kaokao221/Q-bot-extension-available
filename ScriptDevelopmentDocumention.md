@@ -4,7 +4,7 @@
 
 ## 插件结构
 
-正常的插件应该包括四个类（详见[`example_script.py`](/example_script.py)）：[`Info`](#info类)、[`Events`](#Events类)、`UnexpectedSituations`和`Configurations`，以下将详细说明四个类的撰写和API方法。
+正常的插件应该包括四个类（详见[`example_script.py`](/script/example_script.py)）：[`Info`](#info类)、[`Events`](#Events类)、`UnexpectedSituations`和`Configurations`，以下将详细说明四个类的撰写和API方法。
 
 需要注意的是，插件头部需要先引用模块`Manager`，如下：
 ```python

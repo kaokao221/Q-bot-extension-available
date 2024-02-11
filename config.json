@@ -1,3 +1,5 @@
 {
-  "SA": null
+  "log": {
+    "cutter": "hourly"
+  }
 }

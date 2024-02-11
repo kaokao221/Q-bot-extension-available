@@ -1,4 +1,12 @@
 class Log:
+    info = "[INFO]"
+    standard = "[STAN]"
+    warning = "[WARN]"
+    critical = "[CRIT]"
+    error = "[EROR]"
+    debug = "[DEBG]"
+    danger = "[DAGR]"
+
     def __init__(self):
         self.info = "[INFO]"
         self.standard = "[STAN]"

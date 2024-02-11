@@ -1,2 +1,6 @@
 /.idea
 /.devcontainer
+/plugins/*.py
+!/script/example_script.py
+/chatbot.py
+/msgs.txt

@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\qbea]
+@="URL:MyProtocol"
+
+[HKEY_CLASSES_ROOT\qbea\shell]
+@=""
+
+[HKEY_CLASSES_ROOT\qbea\shell\open]
+@=""
+
+[HKEY_CLASSES_ROOT\qbea\shell\open\command]
+@="python D:\\Mine\\Q-bot-extension-available\\protocal\\processor.py %1"
