@@ -16,7 +16,7 @@ class Logger:
 
 {time_during:>120}"""
 
-    def log(self, message: str | RichText, status: str):
+    def log(self, message: str | RichText, status: str | RichText):
         """
         Logs a message to the logger file.
         There will 120 cols in log file.
@@ -25,7 +25,9 @@ class Logger:
         :return:
         """
         message = message + " "
-        if not "logs/{}.log".format(datetime.now().strftime("%Y-%m-%d %H")) in os.listdir("logs"):
+        try:
+            self.logger_file = open("logs/{}.log".format(datetime.now().strftime("%Y-%m-%d %H")), "a")
+        except FileNotFoundError:
             project_info = json.load(open("project_info.json", "r"))
             self.logger_file = open("logs/{}.log".format(datetime.now().strftime("%Y-%m-%d %H")), "w")
             self.logger_file.write(self.log_header.format(
@@ -39,8 +41,12 @@ class Logger:
                                                              str(datetime.now().hour),
                                                              str(datetime.now().hour + 1)),
             ) + "\n" + "=" * 120 + "\n")
-        self.logger_file = open("logs/{}.log".format(datetime.now().strftime("%Y-%m-%d %H")), "a")
-        status_message = "[Line {} at {}]".format(sys._getframe().f_back.f_lineno, sys.argv[0])
+            self.logger_file.close()
+            self.logger_file = open("logs/{}.log".format(datetime.now().strftime("%Y-%m-%d %H")), "a")
+        status_message = "[{} on line {} at {}]".format(
+            status if type(status) is str else status.text,
+            sys._getframe().f_back.f_lineno,
+            sys.argv[0])
         if len(message) < 91:
             if len(message + status_message) > 91:
                 self.logger_file.write(
