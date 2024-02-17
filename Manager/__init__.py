@@ -7,13 +7,29 @@ from unexpectedSituations import *
 
 class Info:
     def __init__(self, Name: str, Description: str, Writer: str, Version: str) -> None:
-        self.Name = Name
-        self.Description = Description
-        self.Writer = Writer
-        self.Version = Version
+        self._Name = Name
+        self._Description = Description
+        self._Writer = Writer
+        self._Version = Version
+
+    @property
+    def Name(self) -> str:
+        return self._Name
+
+    @property
+    def Description(self) -> str:
+        return self._Description
+
+    @property
+    def Writer(self) -> str:
+        return self._Writer
+
+    @property
+    def Version(self) -> str:
+        return self._Version
 
     def __str__(self) -> str:
-        return "插件{}，当前版本号：{}，由{}开发。".format(self.Name, self.Version, self.Description)
+        return "插件{}，当前版本号：{}，由{}开发。".format(self._Name, self._Version, self._Description)
 
 
 parser = argparse.ArgumentParser()

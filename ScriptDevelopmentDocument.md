@@ -1,4 +1,4 @@
-# 这是供脚本([`Script`](/script/))开发者参阅的脚本API指南
+# 这是供脚本 ([`Script`](/script/)) 开发者参阅的脚本API指南
 
 Language Switcher
 Language | Status | Link
