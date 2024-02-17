@@ -1,6 +1,6 @@
 # 项目当前接受推送请求
 
-如果有需要贡献的开发者，当前可以将稳定且可行的既有QQ机器人的`Python连接器`加入`connector`目录并提交`Push Request`，将酌情合并。
+如果有需要贡献的开发者，当前可以将稳定且可行的既有QQ机器人的`Python连接器`加入`connector`目录并提交`Pull Request`，将酌情合并。
 
 如有需要，请联系开发者。机器人的连接器开发的接口转译还请参照[开发者文档](ScriptDevelopmentDocument.md)
 
