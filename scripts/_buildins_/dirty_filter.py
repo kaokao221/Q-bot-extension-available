@@ -37,6 +37,11 @@ class UnexpectedSituations:
             Manager.unexpectedSituations.AdminPermissionNeed
         ]
 
+    @staticmethod
+    def need_admin_permission(_group: Manager.Group, _return: Manager.EventBucket):
+        Manager.message.Message.new("需要群管理权限，操作无法执行")
+        _return.terminate = True
+
 
 if __name__ == '__main__':
     print(Manager.NewMessageFetched)

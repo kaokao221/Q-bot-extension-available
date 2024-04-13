@@ -6,7 +6,7 @@ class Message:
         Message()
 
     @classmethod
-    def new(cls, param):
+    def new(cls, param) -> Message:
         pass
 
 

@@ -29,8 +29,8 @@ class Events:
             "qbea://about"
         ]:
             Manager.Message.new("关于机器人：\n"
-                                "版本alpha:02\n"
-                                "作者:kaokao221\n"
-                                "项目页面:https://github.com/kaokao221/Q-bot-extension-available/").sendto(
+                                "版本 alpha:02\n"
+                                "作者: kaokao221\n"
+                                "项目页面: https://github.com/kaokao221/Q-bot-extension-available/").sendto(
                 Manager.NewMessageFetched.Group
             )

@@ -1,16 +1,23 @@
-# 这是供脚本 ([`Script`](/script/)) 开发者参阅的脚本API指南
+# 这是供脚本 ([`Script`](./scripts)) 开发者参阅的脚本API指南
 
-Language Switcher
-Language | Status | Link
-:-: | :-: | :-:
-Chinese | ✔ | Here
-English | ❌ | Ready
+<details>
 
-需要注意的是，所有的机器人脚本均写为`Python`脚本，除使用`Manager`API外，与正常开发无异。开发过程中应该极力避免包括但不限于`threading`、`asyncio`等异步与多线程方法，这可能导致意料之外的问题。
+<summary>Language Switcher (语言选择器)</summary>
+
+| Language | Status | Link  |
+|:--------:|:------:|:-----:|
+| Chinese  |   ✓    | Here  |
+| English  |   ✗    | Ready |
+
+</details>
+
+**需要注意的是，所有的机器人脚本均写为 `Python` 脚本，除使用 `Manager`API 外，与正常开发无异。开发过程中应该极力避免包括但不限于 `threading`、`asyncio` 等异步与多线程方法，这可能导致意料之外的问题。**
+
+*在将来的某个版本中，可能会支持 `anyscio` 异步语法。*
 
 ## 脚本结构
 
-正常的脚本应该包括四个类（详见[`example_script.py`](/script/example_script.py)）：[`Info`](#info类)、[`Events`](#Events类)、`UnexpectedSituations`和`Configurations`，以下将详细说明四个类的撰写和API方法。
+正常的脚本应该包括四个类 (详见 [`example_script.py`](./scripts/example_script.py))：[`Info`](#info类)、[`Events`](#Events类)、`UnexpectedSituations` 和 `Configurations`，以下将详细说明四个类的撰写和 API 方法。
 
 需要注意的是，脚本头部需要先引用模块`Manager`，如下：
 ```python
@@ -18,6 +25,7 @@ import Manager
 ```
 
 ### `Info`类
+
 `Info`是该脚本的基本信息。
 
 这是一个`Info`示例片段

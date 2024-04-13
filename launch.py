@@ -1,5 +1,5 @@
 """
 Launcher for the Q-bot
-Start this script instead of main.py
+Start this scripts instead of main.py
 """
 import launcher

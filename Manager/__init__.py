@@ -35,7 +35,7 @@ class Info:
 parser = argparse.ArgumentParser()
 parser.add_argument("--process-type", type=str, default="NewMessageFetched")
 parser.add_argument("--message-id", type=int, default=-1)
-NewMessageFetched = message.Fetch(id=parser.message_id)
+NewMessageFetched = message.Fetch(id=parser.args().message_id)
 
 if __name__ == "__main__":
     print(parser)
